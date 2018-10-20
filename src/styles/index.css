@@ -1,3 +1,8 @@
+@font-face {
+  font-family: "KudetaScript";
+  src: url("KudetaScript.woff") format("woff");
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -19,26 +24,84 @@ body {
   height: 100%;
 }
 
+.section-1 .left-menu .intro-text {
+  font-size: 32px;
+  color: tomato;
+  position: absolute;
+  top: 60%;
+  left: 68%;
+  font-weight: 200;
+  font-family: 'KudetaScript';
+  text-shadow: 2px 2px #232323;
+}
+
 .section-1 .section-photo-1 {
-  background: url("../assets/bg1.jpg") no-repeat right top;
+  background-color: tomato;
   background-size: cover;
   width: 70%;
   height: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.section-1 .section-photo-1 .computer-image {
+  left: 20%;
+  position: relative;
+  background: url("../assets/computer.png") no-repeat bottom;
+  position: absolute;
+  background-size: 100%;
+  opacity: 0.9;
+  width: 600px;
+  height: 300px;
+}
+
+.section-1 .section-photo-1 .computer-image .lamp-img {
+  z-index: 2;
+  bottom: 7%;
+  left: 20%;
+  position: absolute;
+  width: 60%;
+}
+
+.section-1 .section-photo-1 .calendar-image {
+  left: 20%;
+  position: relative;
+  background: url("../assets/calendar.png") no-repeat bottom;
+  position: absolute;
+  background-size: 100%;
+  opacity: 0.9;
+  width: 100px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-size: 24px;
+  font-weight: bold;
+  color: #232323;
 }
 
 .section-2 {
   background-color: black;
-  height: 80vh;
+  height: 100vh;
   width: 100%;
   display: flex;
 }
 
+.section-2 .left-menu-2 {
+  width: 30%;
+  background-color: #232323;
+  height: 80%;
+}
+
 .section-2 .section-photo-2 {
-  align-self: flex-end;
-  background: url("../assets/bg1.jpg") no-repeat right top;
+  align-self: flex-start;
+  background: url("../assets/bg.jpg") no-repeat right top;
   background-size: cover;
-  width: 100%;
-  height: 25%;
+  width: 70%;
+  height: 80%;
 }
 
 a {
