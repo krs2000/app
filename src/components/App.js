@@ -3,12 +3,14 @@ import computer from '../assets/computer.png'
 import lamp from '../assets/lamp.png'
 import lamp1 from '../assets/lamp1.png'
 import calendar from '../assets/calendar.png'
+import About from './About.js'
 
 class App extends Component {
   constructor(props) {
     super(props);
     var d = new Date();
     this.state = {
+      currentPage:'about',
       scrollPos: 0,
       lamp: true,
       dateDays: d.getDate(),
@@ -51,9 +53,10 @@ class App extends Component {
           <span></span>
           <span></span>
           <ul id="menu">
-            <a ><li>Home</li></a>
-            <a ><li>About</li></a>
-            <a ><li>Info</li></a>
+            <a onClick={()=>this.setState({currentPage:'homepage'})}><li>Home</li></a>
+            <a onClick={()=>this.setState({currentPage:'about'}) }><li>About</li></a>
+            <a ><li>Projects</li></a>
+            <a><li>Blog</li></a>
             <a><li>Contact</li></a>
           </ul>
         </div>
@@ -75,11 +78,11 @@ class App extends Component {
        
           </div>
       
-          <div className="section-photo-1" id="section-2">
+        {this.state.currentPage == 'homepage' && (  <div className="section-photo-1 slideDown" id="section-2">
           <div className="sheleves-image">
           <div className="books-image"></div>
            </div>
-          <div className="calendar-image"> 
+          <div className="calendar-image wiggle"> 
           <span>{this.state.dateDays}</span>
           <span>{this.state.dateMonth}</span>
           </div>
@@ -90,7 +93,10 @@ class App extends Component {
               }
             } />
             </div>
-        </div>
+          </div> ) }
+          {this.state.currentPage == 'about' && (  <div className="section-photo-1 slideDown" id="section-2">
+            <About />
+          </div> ) }
       </div>
       <div className='section-2'>
         <div className="left-menu-2"></div>
