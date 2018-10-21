@@ -19,10 +19,14 @@ body {
     height: 100vh;
     width: 100%;
     display: flex;
+    // background: url('../assets/brush.png');
+    background-size: 30%;
     .left-menu {
         width: 30%;
         background-color: $color-dark;
-        height: 100%; // .name-text{
+        height: 100%;
+        display: flex;
+       // .name-text{
         //     font-size:68px;
         //     color:$color-white;
         //     position:absolute;
@@ -32,15 +36,40 @@ body {
         //     font-family: 'KudetaScript';
         //     text-shadow: 2px 2px $color-black;
         //   }
-        .intro-text {
-            font-size: 32px;
-            color: tomato;
+        // .intro-text {
+        //     font-size: 32px;
+        //     color: $color-black;
+        //     position: relative;
+        //     z-index:3;
+        //     top: 10px;
+        //     left: 103px;
+        //     font-weight: 200;
+        //     width:700px;
+        //     opacity: 0.7;
+        //     font-family: 'KudetaScript';
+        // }
+        // .triangle {
+        //     position: absolute;
+        //     top:200px;
+        //     left:120px;
+        //     width: 150px;
+        //     height: 140px;
+        //     background: $color-white;; 
+        //     -moz-border-radius: 70px; 
+        //     -webkit-border-radius: 70px; 
+        //     border-radius: 70px;
+        // }
+        .introduction {
             position: absolute;
-            top: 60%;
-            left: 68%;
-            font-weight: 200;
+            top:200px;
+            left:100px;
+            
+            border-top: 2px solid $color-white;
+            border-bottom: 2px solid $color-white;
+            color: $color-white;
             font-family: 'KudetaScript';
-            text-shadow: 2px 2px $color-black;
+            font-size: 24px;
+            background-color: $color-dark;
         }
     }
     .section-photo-1 {
@@ -52,15 +81,38 @@ body {
         justify-content: center;
         align-items: center;
         position: relative;
+        .sheleves-image {
+            left: 0%;
+            top: 1%;
+            position: relative;
+            background: url('../assets/shelves.png') no-repeat;
+            background-size: 100%;
+            width: 600px;
+            height: 300px;
+            .books-image {
+                position: absolute;
+                bottom: 198px;
+                left: 0px;
+                background: url('../assets/books.png') no-repeat;
+                background-size: 100%;
+                width: 200px;
+                height: 200px;
+                opacity: 0.9;
+                &:hover {
+                    opacity: 1;
+                    transform: scale(1.05)
+                }
+            }
+        }
         .computer-image {
             left: 20%;
             position: relative;
             background: url('../assets/computer.png') no-repeat bottom;
             position: absolute;
-            background-size: 100% ;
+            background-size: 100%;
             opacity: 0.9;
-            width:600px;
-            height:300px;
+            width: 600px;
+            height: 300px;
             .lamp-img {
                 z-index: 2;
                 bottom: 7%;
@@ -74,17 +126,17 @@ body {
             position: relative;
             background: url('../assets/calendar.png') no-repeat bottom;
             position: absolute;
-            background-size: 100% ;
+            background-size: 100%;
             opacity: 0.9;
-            width:100px;
-            height:100px;
-            display:flex;
+            width: 100px;
+            height: 100px;
+            display: flex;
             justify-content: center;
             align-items: center;
-           flex-direction: column;
-           font-size:24px;
-           font-weight:bold;
-           color:$color-black;
+            flex-direction: column;
+            font-size: 24px;
+            font-weight: bold;
+            color: $color-black;
         }
     }
 }
@@ -94,6 +146,7 @@ body {
     height: 100vh;
     width: 100%;
     display: flex;
+    background: url('../assets/coding.png') no-repeat bottom right;
     .left-menu-2 {
         width: 30%;
         background-color: $color-black;
@@ -101,8 +154,7 @@ body {
     }
     .section-photo-2 {
         align-self: flex-start;
-        background: url('../assets/bg.jpg') no-repeat right top;
-        background-size: cover;
+        // background-color: #544443;
         width: 70%;
         height: 80%;
     }

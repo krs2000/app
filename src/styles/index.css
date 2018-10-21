@@ -16,23 +16,26 @@ body {
   height: 100vh;
   width: 100%;
   display: flex;
+  background-size: 30%;
 }
 
 .section-1 .left-menu {
   width: 30%;
   background-color: #373F51;
   height: 100%;
+  display: flex;
 }
 
-.section-1 .left-menu .intro-text {
-  font-size: 32px;
-  color: tomato;
+.section-1 .left-menu .introduction {
   position: absolute;
-  top: 60%;
-  left: 68%;
-  font-weight: 200;
+  top: 200px;
+  left: 100px;
+  border-top: 2px solid #cdcdcd;
+  border-bottom: 2px solid #cdcdcd;
+  color: #cdcdcd;
   font-family: 'KudetaScript';
-  text-shadow: 2px 2px #232323;
+  font-size: 24px;
+  background-color: #373F51;
 }
 
 .section-1 .section-photo-1 {
@@ -44,6 +47,32 @@ body {
   justify-content: center;
   align-items: center;
   position: relative;
+}
+
+.section-1 .section-photo-1 .sheleves-image {
+  left: 0%;
+  top: 1%;
+  position: relative;
+  background: url("../assets/shelves.png") no-repeat;
+  background-size: 100%;
+  width: 600px;
+  height: 300px;
+}
+
+.section-1 .section-photo-1 .sheleves-image .books-image {
+  position: absolute;
+  bottom: 198px;
+  left: 0px;
+  background: url("../assets/books.png") no-repeat;
+  background-size: 100%;
+  width: 200px;
+  height: 200px;
+  opacity: 0.9;
+}
+
+.section-1 .section-photo-1 .sheleves-image .books-image:hover {
+  opacity: 1;
+  transform: scale(1.05);
 }
 
 .section-1 .section-photo-1 .computer-image {
@@ -88,6 +117,7 @@ body {
   height: 100vh;
   width: 100%;
   display: flex;
+  background: url("../assets/coding.png") no-repeat bottom right;
 }
 
 .section-2 .left-menu-2 {
@@ -98,8 +128,6 @@ body {
 
 .section-2 .section-photo-2 {
   align-self: flex-start;
-  background: url("../assets/bg.jpg") no-repeat right top;
-  background-size: cover;
   width: 70%;
   height: 80%;
 }

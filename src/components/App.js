@@ -68,8 +68,17 @@ class App extends Component {
             {this.Menu()}
             {/* <h2 className="name-text">Krzysztof Krysiak</h2> */}
             {/* <h2 className="intro-text">Action is the foundational key to all success.</h2> */}
+            <div className="triangle">     </div>
+            <div className="introduction">
+              Krzysztof Krysiak
+            </div>
+       
           </div>
+      
           <div className="section-photo-1" id="section-2">
+          <div className="sheleves-image">
+          <div className="books-image"></div>
+           </div>
           <div className="calendar-image"> 
           <span>{this.state.dateDays}</span>
           <span>{this.state.dateMonth}</span>
