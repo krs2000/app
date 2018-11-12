@@ -1,0 +1,62 @@
+.about-section {
+  background-color: #3E78B2;
+  background-size: cover;
+  width: 70%;
+  height: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.skillsBox img {
+  margin: 5px;
+}
+
+.thirdSection {
+  grid-area: thirdSection;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  background: white;
+}
+
+.secondSection {
+  height: 250px;
+  background: #1d1d1d;
+  grid-area: secondSection;
+  text-align: center;
+  align-items: center;
+}
+
+button {
+  margin: 0 0 20px 0;
+  border: none;
+  background: transparent;
+  color: white;
+  font-size: 20px;
+  padding: 0 50px;
+  cursor: pointer;
+  position: relative;
+}
+
+button:focus {
+  outline: 0;
+}
+
+.triangle {
+  position: relative;
+}
+
+.triangle::before {
+  content: "";
+  margin: 0 0 0 0px;
+  width: 0px;
+  height: 0px;
+  border-bottom: solid 30px white;
+  border-left: solid 30px transparent;
+  border-right: solid 30px transparent;
+  position: absolute;
+  top: 70px;
+  left: 70px;
+}
