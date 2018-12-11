@@ -20,8 +20,8 @@ class Contact extends Component {
           </form> */}
            <MessengerCustomerChat
     pageId="410114706194481"
-    appId="<APP_ID>"
-    htmlRef="<REF_STRING>"
+    appId="2201094929903504"
+    htmlRef={window.location.pathname}
   />
 
           <div id="progress"></div>

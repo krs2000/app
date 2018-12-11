@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import computer from '../../assets/computer.png'
 import lamp from '../../assets/lamp.png'
-import Linkedin from '../../assets/LinkedIn.svg'
+import Linkedin from '../../assets/Linkedin.svg'
 import Instagram from '../../assets/Instagram.svg'
-import GitHub from '../../assets/Github.svg'
+import GitHub from '../../assets/GitHub.svg'
 import lamp1 from '../../assets/lamp1.png'
 import calendar from '../../assets/calendar.png'
 import About from '../About/About.js'
