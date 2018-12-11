@@ -1,23 +1,32 @@
 import React, { Component } from 'react';
 import './Contact.css';
+import Input from '@material-ui/core/Input';
+import IconButton from '@material-ui/core/IconButton';
+import TextField from '@material-ui/core/TextField';
+import MessengerCustomerChat from 'react-messenger-customer-chat';
 
 class Contact extends Component {
   render() {
     return (
 
-      <div classNameName="contact">
+      <div className="contact" id='contact'>
 
         <div className="emailForm">
-          <form className="formData" action="https://formspree.io/krskrysiak@gmail.com"
+          {/* <form className="formData" action="https://formspree.io/krskrysiak@gmail.com"
             method="POST">
-            <input type="text" name="name" placeholder="Name" />
-      <input type="text" name="name" placeholder="Topic" />
-            <input type="text" className="textData" name="message" placeholder="Your message" />
-            <input type="email" className="emailData" name="_replyto" placeholder="Email" />
-            <input type="submit" value="Send" />
-        </form>
-        </div>
+            <TextField rowsMax={10} multiline={true} type="text" className="textData" name="message" placeholder="Your message" fullWidth={true} required={true}/>
+            <Input type="email" className="emailData" name="_replyto" placeholder="Email" fullWidth={true} required={true}/>
+            <IconButton type="submit" value="Send" children='send'/>
+          </form> */}
+           <MessengerCustomerChat
+    pageId="410114706194481"
+    appId="<APP_ID>"
+    htmlRef="<REF_STRING>"
+  />
 
+          <div id="progress"></div>
+
+        </div>
       </div>
 
 

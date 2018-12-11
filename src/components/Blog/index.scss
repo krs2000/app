@@ -1,0 +1,83 @@
+.blog {
+    background-color: black;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    background: #f4f4f4;
+}
+
+h2 {
+    text-align: center;
+}
+
+h3 {
+    font-size: 16px;
+    padding:0;
+    color:black;
+    background: white;
+}
+
+.blog-feed {
+    width: 80%;
+    height: 80vh;
+ 
+}
+
+html {
+    background-color: #eee;
+}
+
+/*-----------------------------
+Cards
+-----------------------------*/
+
+.cards {
+    max-width: 1200px;
+    margin:  auto;
+    height: 100%;
+    display:flex;
+
+}
+
+.card {
+    width: 30%;
+    margin: 0 1.5%;
+    background: #fff;
+    float: left;
+    height:500px;
+    &:first-of-type{
+        width:50%;
+    }
+}
+
+.card__image {
+    width: 100%;
+    height: auto;
+}
+
+.card__copy {
+    padding: 5px 20px;
+}
+
+.card__copy h3 {
+    margin-bottom: 0
+}
+
+.card:hover {
+    box-shadow: 0 20px 30px 0 rgba(0, 0.2, 0, 0.2);
+}
+
+/*-----------------------------
+Smartphone
+-----------------------------*/
+
+@media (max-width: 767px) {
+    /* Cards */
+    .card {
+        width: 90%;
+        margin: 5%;
+    }
+}

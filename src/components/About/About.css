@@ -1,39 +1,44 @@
-.about-section {
-  background-color: #3E78B2;
-  background-size: cover;
-  width: 70%;
-  height: 80%;
+.about {
+  height: 100vh;
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: -webkit-linear-gradient(to bottom, #a3daff, #4ea1d3);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to bottom, #a3daff, #4ea1d3);
+}
+
+.skills img {
+  margin: 15px;
+  height: 58px;
+  width: 58px;
+}
+
+.skills-box {
+  height: 170px;
   display: flex;
   justify-content: center;
-  align-items: center;
-  position: relative;
 }
 
-.skillsBox img {
-  margin: 5px;
-}
-
-.thirdSection {
-  grid-area: thirdSection;
-  height: 300px;
-  display: flex;
-  justify-content: center;
-  background: white;
-}
-
-.secondSection {
-  height: 250px;
-  background: #1d1d1d;
+.about-header-box {
+  height: 160px;
+  background: #011627;
   grid-area: secondSection;
   text-align: center;
   align-items: center;
 }
 
+h3 {
+  color: #fff;
+  font-size: 56px;
+  text-align: center;
+  padding: 100px 0;
+  margin: 0;
+}
+
 button {
-  margin: 0 0 20px 0;
+  margin: 50px 0;
   border: none;
   background: transparent;
-  color: white;
+  color: #f4f4f4;
   font-size: 20px;
   padding: 0 50px;
   cursor: pointer;
@@ -53,10 +58,15 @@ button:focus {
   margin: 0 0 0 0px;
   width: 0px;
   height: 0px;
-  border-bottom: solid 30px white;
+  border-bottom: solid 30px #f4f4f4;
   border-left: solid 30px transparent;
   border-right: solid 30px transparent;
   position: absolute;
-  top: 70px;
+  top: 80px;
   left: 70px;
+  transition: 0.5s ease;
+}
+
+.triangle.triangle-1::before {
+  left: 250px;
 }
