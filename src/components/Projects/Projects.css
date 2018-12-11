@@ -20,7 +20,6 @@
 
 .project-box-2 {
   width: 300px;
-  height: 200px;
   background-size: 70%;
   background-position: center;
   color: white;
@@ -38,4 +37,28 @@
   background-size: 70%;
   background-position: center;
   cursor: pointer;
+}
+
+.project-box-3 {
+  width: 300px;
+  height: 200px;
+  background: url("../../assets/naefos.png") no-repeat;
+  background-size: 70%;
+  background-position: center;
+  cursor: pointer;
+}
+
+.project-row {
+  display: flex;
+  width: 100%;
+}
+
+.project-row h3 {
+  margin-left: 50px;
+  width: 50%;
+  background: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
 }
