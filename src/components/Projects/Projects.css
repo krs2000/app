@@ -6,7 +6,6 @@
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
-  padding-left: 5vw;
 }
 
 .project-box {
@@ -22,7 +21,7 @@
   width: 300px;
   background-size: 70%;
   background-position: center;
-  color: white;
+  color: black;
   font-size: 34px;
   text-align: center;
   cursor: pointer;
@@ -39,6 +38,12 @@
   cursor: pointer;
 }
 
+h2 {
+  color: white;
+  text-align: center;
+  width: 100%;
+}
+
 .project-box-3 {
   width: 300px;
   height: 200px;
@@ -48,17 +53,81 @@
   cursor: pointer;
 }
 
-.project-row {
-  display: flex;
+.project-row-box {
   width: 100%;
+  background: white;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-.project-row h3 {
+.project-row-box .project-row {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+
+.project-row-box .project-row h3 {
   margin-left: 50px;
   width: 50%;
   background: transparent;
   display: flex;
   justify-content: center;
   align-items: center;
+  color: black;
+}
+
+h4 {
+  font-size: 24px;
   color: white;
+  display: flex;
+  justify-content: center;
+}
+
+button {
+  margin: 50px 0;
+  border: none;
+  background: transparent;
+  color: #f4f4f4;
+  font-size: 20px;
+  padding: 0 50px;
+  cursor: pointer;
+  position: relative;
+}
+
+button:focus {
+  outline: 0;
+}
+
+.triangle {
+  position: relative;
+}
+
+.triangle::before {
+  content: "";
+  margin: 0 0 0 0px;
+  width: 0px;
+  height: 0px;
+  border-bottom: solid 30px #f4f4f4;
+  border-left: solid 30px transparent;
+  border-right: solid 30px transparent;
+  position: absolute;
+  top: 80px;
+  left: 70px;
+  transition: 1s ease;
+}
+
+.triangle.triangle-1::before {
+  left: 250px;
+}
+
+.triangle-box {
+  width: 100%;
+  height: 160px;
+  background: #a3daff;
+  grid-area: secondSection;
+  text-align: center;
+  align-items: center;
 }

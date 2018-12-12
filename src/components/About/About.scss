@@ -24,12 +24,11 @@
 
 }
 
-.about-header-box {
-    height: 160px;
-    background: #011627;
-    grid-area: secondSection;
+h2{
+    color:white;
     text-align: center;
-    align-items: center;
+    width:100%;
+    margin:0;
 }
 
 h3 {
@@ -41,39 +40,4 @@ h3 {
  
 
    
-}
-
-button {
-    margin:50px 0;
-    border: none;
-    background: transparent;
-    color: #f4f4f4; // position: relative;
-    font-size: 20px;
-    padding: 0 50px;
-    cursor: pointer;
-    position: relative;
-    &:focus {
-        outline: 0;
-    }
-}
-
-.triangle {
-    position: relative;
-    &::before {
-        content: "";
-        margin: 0 0 0 0px;
-        width: 0px;
-        height: 0px;
-        border-bottom: solid 30px #f4f4f4;
-        border-left: solid 30px transparent;
-        border-right: solid 30px transparent;
-        position: absolute;
-        top: 80px;
-        left: 70px;
-        transition: 0.5s ease;
-    }
-    &.triangle-1 {
-        &::before {
-            left: 250px  }
-    }
 }
