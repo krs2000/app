@@ -1,6 +1,7 @@
 $color-dark: #373F51;
 $color-black:#232323;
 $color-white: #cdcdcd;
+
 @font-face {
     font-family: "KudetaScript";
     src: url("../../styles/KudetaScript.woff") format('woff');
@@ -283,13 +284,12 @@ a:hover {
 
 h2 {
     letter-spacing: 12px;
-    font-size: 48px !important;
+    font-size: 36px !important;
     padding: 36px 0;
     margin: 0;
 }
 
 
-  * {
-        transform:  scale(70%) !important;
-    
-    }
+p, h1 , h2, h3, h4 , a, span {
+    transform: scale(.7)
+}
