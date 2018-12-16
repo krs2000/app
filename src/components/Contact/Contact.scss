@@ -6,31 +6,48 @@ $color-white: #cdcdcd;
     background-size: cover;
     height: 100vh;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     flex-direction: column;
     background-image: url('../../assets/coding.png');
     background-repeat: no-repeat;
     background-size: 50%;
     background-position: bottom right;
+    position: relative;
 }
-
 
 .emailForm {
-  width:50vw;
+    width: 50vw;
 }
 
-.formData{
-  display: flex;
+.formData {
+    display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
- 
 }
 
 .textData,
 .emailData {
     background: #f4f4f4;
-    margin:5px;
+    margin: 5px;
+}
 
+.icon-contact {
+    color: white;
+    padding-bottom:16px;
+    font-size: 24px;
+    img {
+        margin-right: 16px;
+        width: 48px;
+        height: 48px;
+    }
+}
+
+canvas {
+    position: absolute;
+    left:0;
+    top:-100vh;
+    // display:block; 
+  
 }

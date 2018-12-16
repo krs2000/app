@@ -1,43 +1,55 @@
 .about {
-    height:100vh;
-
+    height: 100vh;
     /* Chrome 10-25, Safari 5.1-6 */
     background: -webkit-linear-gradient(to bottom, #a3daff, #4ea1d3);
     /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to bottom, #a3daff, #4ea1d3);
-   
+    h3 {
+        color: #fff;
+        font-size: 56px;
+        text-align: center;
+        padding: 100px 0;
+        margin: 0;
+        z-index: 2;
+    }
 }
-
 
 .skills img {
     margin: 15px;
-    height:58px;
-    width:58px;
+    height: 58px;
+    width: 58px;
 }
 
 .skills-box {
     height: 170px;
-    
     display: flex;
     justify-content: center;
-
-
 }
 
-h2{
-    color:white;
+h2 {
+    color: white;
     text-align: center;
-    width:100%;
-    margin:0;
+    width: 100%;
+    z-index: 2;
 }
 
-h3 {
-    color: #fff;
-    font-size: 56px;
+p {
+    font-size: 24px;
+    color: white;
+    width: 100%;
     text-align: center;
-    padding: 100px 0;
-    margin:0;
- 
+    z-index: 2;
+}
 
-   
+.profile-box {
+    width: 100%;
+    justify-content: center;
+    display: flex;
+    img {
+        width: 360px;
+        height: 360px;
+        opacity: 0.9;
+        padding: 16px;
+        z-index: 2;
+    }
 }

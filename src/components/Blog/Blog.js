@@ -31,7 +31,7 @@ class Blog extends Component {
             <div className="card" key={`article-${article._id}`} >
               <img className="card__image" src="https://source.unsplash.com/category/nature/400x260" alt="Nature" />
               <div className="card__copy">
-                <h3>{article.title}</h3>
+                <h4>{article.title}</h4>
                 <p>{article.body}</p>
               </div>
 
@@ -46,8 +46,9 @@ class Blog extends Component {
   render() {
     return (
       <div className="blog" id='blog'>
+        <h2>Blog</h2>
     <img className={sb} src={sb} alt="Nature" />
-        <h2>Latest post</h2>
+    <h3>Latest Posts</h3>
         <div className="blog-feed" onClick={() => console.log(this.state)}>
           {this.state.articles.length > 0 ? this.returnArticles() : ''}
         </div>

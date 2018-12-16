@@ -6,6 +6,15 @@
   background: linear-gradient(to bottom, #a3daff, #4ea1d3);
 }
 
+.about h3 {
+  color: #fff;
+  font-size: 56px;
+  text-align: center;
+  padding: 100px 0;
+  margin: 0;
+  z-index: 2;
+}
+
 .skills img {
   margin: 15px;
   height: 58px;
@@ -22,13 +31,27 @@ h2 {
   color: white;
   text-align: center;
   width: 100%;
-  margin: 0;
+  z-index: 2;
 }
 
-h3 {
-  color: #fff;
-  font-size: 56px;
+p {
+  font-size: 24px;
+  color: white;
+  width: 100%;
   text-align: center;
-  padding: 100px 0;
-  margin: 0;
+  z-index: 2;
+}
+
+.profile-box {
+  width: 100%;
+  justify-content: center;
+  display: flex;
+}
+
+.profile-box img {
+  width: 360px;
+  height: 360px;
+  opacity: 0.9;
+  padding: 16px;
+  z-index: 2;
 }
