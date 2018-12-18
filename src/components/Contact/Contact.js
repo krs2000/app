@@ -121,7 +121,6 @@ resizeCanvas();
   componentDidMount() {
     this.setState({ elementHeight: 2 * this.contactRef.clientHeight ,
       elementWidth: this.contactRef.clientWidth  },    () => setTimeout(()=>this.matrix(),1000)  );
-   
   }
 
   render() {
