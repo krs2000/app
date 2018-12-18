@@ -25,7 +25,7 @@ class Blog extends Component {
 
   returnArticles = () => {
     return (
-      <div  class="cards clearfix">
+      <div class="cards clearfix">
         {
           this.state.articles.slice(0, 3).map((article) =>
             <div className="card" key={`article-${article._id}`} >
@@ -47,9 +47,8 @@ class Blog extends Component {
     return (
       <div className="blog" id='blog'>
         <h2>Blog</h2>
-    <img className={sb} src={sb} alt="Nature" />
-    <h3>Latest Posts</h3>
-        <div className="blog-feed" onClick={() => console.log(this.state)}>
+        <h3>Latest Posts</h3>
+        <div className="blog-feed slideLeft" onClick={() => console.log(this.state)}>
           {this.state.articles.length > 0 ? this.returnArticles() : ''}
         </div>
       </div>

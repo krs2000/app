@@ -1,30 +1,16 @@
 .about {
   height: 100vh;
   /* Chrome 10-25, Safari 5.1-6 */
-  background: -webkit-linear-gradient(to bottom, #a3daff, #4ea1d3);
-  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to bottom, #a3daff, #4ea1d3);
+  background: black;
 }
 
-.about h3 {
+.about h4 {
   color: #fff;
-  font-size: 56px;
+  font-size: 1.2rem;
   text-align: center;
-  padding: 100px 0;
+  padding: 0;
   margin: 0;
   z-index: 2;
-}
-
-.skills img {
-  margin: 15px;
-  height: 58px;
-  width: 58px;
-}
-
-.skills-box {
-  height: 170px;
-  display: flex;
-  justify-content: center;
 }
 
 h2 {
@@ -35,7 +21,7 @@ h2 {
 }
 
 p {
-  font-size: 24px;
+  font-size: 1rem;
   color: white;
   width: 100%;
   text-align: center;

@@ -28,12 +28,13 @@ console.log(this.state.firstCard)
           <button className="btn-2" onClick={()=> this.change()}>Personal</button>
         </div>
       { !this.state.firstCard &&  <div className="project-row-box">
-        <div className="project-row">  <div className="project-box-1"></div><h3>Crafted beers playground app</h3></div>
-        <div className="project-row"><div className="project-box-2">Invest Jar</div><h3>Investing playground app</h3></div>
+        <div className="project-row">  <div className="project-box-1"></div><h3>Crafted beers playground app v0.1</h3></div>
+        <div className="project-row"><div className="project-box-2">Invest Jar</div><h3>Investing playground app v0.1</h3></div>
     </div> }
        { this.state.firstCard  && <div className="project-row-box">
-        <div className="project-row"><div className="project-box"></div><h3>Filming agency website</h3></div>
-        <div className="project-row"><div className="project-box-3"></div><h3>Hi-tech company webpage in colaboration with clickdesign.pl</h3></div>
+        <div className="project-row"><div className="project-box"></div><h3>Filming Agency</h3></div>
+        <div className="project-row"><div className="project-box-3">Clickdesign</div><h3>Web Agency</h3></div>
+        <div className="project-row"><div className="project-box-4"></div><h3>Software House</h3></div>
     </div> }
       </div>
     );

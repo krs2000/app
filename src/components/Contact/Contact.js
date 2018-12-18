@@ -7,6 +7,7 @@ import MessengerCustomerChat from 'react-messenger-customer-chat';
 import Pin from '../../assets/Pin.svg'
 import Email from '../../assets/Email.svg'
 import Phone from '../../assets/Phone.svg'
+import spacing from '@material-ui/core/styles/spacing';
 
 class Contact extends Component {
   constructor(props) {
@@ -54,19 +55,19 @@ resizeCanvas();
     context.globalCompositeOperation = 'lighter';
 
  
-    var textStrip = ['JS', ' HTML', 'CSS'];
+    var textStrip = ['JS', ' HTML', 'CSS','Angular','Angular.js', 'React.js','API','UI/UX','WP','C#','Node.js'];
 
     var stripCount = 15, stripX = new Array(), stripY = new Array(), dY = new Array(), stripType = new Array(), stripFontSize = new Array();
 
     for (var i = 0; i < stripCount; i++) {
       stripX[i] = 0;
       stripY[i] = Math.floor(Math.random() * canvas.height);
-      stripType[i] = Math.floor(Math.random() * 3);
+      stripType[i] = Math.floor(Math.random() * textStrip.length);
       dY[i] = Math.floor(Math.random() * 7) + 3;
       stripFontSize[i] = Math.floor(Math.random() * 16) + 8;
     }
 
-    var theColors = ['rgba(255, 255, 255, 0.5)'];
+    var theColors = ['rgba(255, 255, 255, 0.3)'];
 
     var elem, context, timer;
 
@@ -94,14 +95,14 @@ resizeCanvas();
       context.shadowColor = 'rgba(255, 255, 255, 0.5)';
   
       for (var j = 0; j < stripCount; j++) {
-        context.font = stripFontSize[j] + 'px KudetaScript';
+        context.font = stripFontSize[j] + 'px GalanoGrotesqueW00-Bold';
         context.textBaseline = 'bottom';
         context.textAlign = 'center';
-
+    
         if ( stripX[j] > width) {
           stripX[j] = 0;
-          stripY[j] = Math.floor(Math.random() * canvas.height);
-          stripType[j] = Math.floor(Math.random() * 3);
+          stripY[j] = Math.floor(Math.random() * canvas.height + 10) ;
+          stripType[j] = Math.floor(Math.random() * textStrip.length);
           dY[j] = Math.floor(Math.random() * 7) + 3;
           stripFontSize[j] = Math.floor(Math.random() * 16) + 8;
           drawStrip(stripX[j], stripY[j], stripType[j]);

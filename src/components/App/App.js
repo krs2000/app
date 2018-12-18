@@ -99,7 +99,7 @@ class App extends Component {
 
   render() {
     return (
-      <div className="">
+      <div className="app">
 
         <div className="left-menu ">
           <ul id="menu">
@@ -113,7 +113,7 @@ class App extends Component {
           {/*     
             {this.Menu()}
             <div className="homepage-text-box"><span><div className="fadeIn">Making</div><div className="shake">ideas</div><div className="fadeIn underline">happen</div></span></div>
-         */}   <div className="icons"><img src={Linkedin} /><img src={GitHub} />
+         */}   <div className="icons"><img src={Linkedin} />
             {/* <img src={Instagram} /> */}
           </div>
         </div>

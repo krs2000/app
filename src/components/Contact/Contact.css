@@ -1,14 +1,13 @@
 .contact {
-  background-color: #4ea1d3;
+  background-color: black;
   background-size: cover;
   height: 100vh;
   display: flex;
   justify-content: flex-start;
   align-items: center;
   flex-direction: column;
-  background-image: url("../../assets/coding.png");
   background-repeat: no-repeat;
-  background-size: 50%;
+  background-size: 100%;
   background-position: bottom right;
   position: relative;
 }

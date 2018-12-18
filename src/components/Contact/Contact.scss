@@ -2,18 +2,54 @@ $color-dark: #373F51;
 $color-black:#232323;
 $color-white: #cdcdcd;
 .contact {
-    background-color: #4ea1d3;
+    background-color:black ;
     background-size: cover;
     height: 100vh;
     display: flex;
     justify-content: flex-start;
     align-items: center;
     flex-direction: column;
-    background-image: url('../../assets/coding.png');
+
     background-repeat: no-repeat;
-    background-size: 50%;
+    background-size: 100%;
+   
     background-position: bottom right;
     position: relative;
+
+//     &:after{
+      
+//         content: "";
+//         position: absolute;
+//     height:100%;
+//     width:100%;
+//         top:-17%;
+//         left:65%;
+//         background-image: url('../../assets/01.jpg');
+//         -webkit-transform: rotate(-60deg);
+//         -moz-transform: rotate(-60deg);
+//         -ms-transform: rotate(-60deg);
+//         -o-transform: rotate(-60deg);
+//         transform: rotate(-60deg);
+//         opacity: .5;
+    
+// }
+//     &:before{
+      
+//             content: "";
+//             position: absolute;
+//         height:100%;
+//         width:100%;
+//             top:-20%;
+//             left:80%;
+//             background-image: url('../../assets/01.jpg');
+//             -webkit-transform: rotate(-60deg);
+//             -moz-transform: rotate(-60deg);
+//             -ms-transform: rotate(-60deg);
+//             -o-transform: rotate(-60deg);
+//             transform: rotate(-60deg);
+//             opacity: .9;
+        
+//     }
 }
 
 .emailForm {

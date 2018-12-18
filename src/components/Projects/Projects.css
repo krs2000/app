@@ -1,5 +1,5 @@
 .projects {
-  background-color: #a3daff;
+  background-color: black;
   background-size: cover;
   height: 100vh;
   display: flex;
@@ -9,30 +9,34 @@
 
 .project-box {
   width: 300px;
-  height: 100px;
+  height: 100%;
   background: url("../../assets/ob.png") no-repeat;
-  background-size: 100%;
+  background-size: 70%;
   background-position: center;
   cursor: pointer;
 }
 
 .project-box-2 {
   width: 300px;
-  background-size: 70%;
+  background-size: 50%;
   background-position: center;
-  color: black;
+  color: #696969;
   font-size: 34px;
   text-align: center;
   cursor: pointer;
   text-transform: uppercase;
   font-weight: 900;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .project-box-1 {
   width: 300px;
-  height: 200px;
+  height: 100%;
   background: url("../../assets/cba.png") no-repeat;
-  background-size: 70%;
+  background-size: 40%;
   background-position: center;
   cursor: pointer;
 }
@@ -45,17 +49,33 @@ h2 {
 
 .project-box-3 {
   width: 300px;
-  height: 200px;
-  background: url("../../assets/naefos.png") no-repeat;
-  background-size: 70%;
+  background-size: 50%;
+  background-position: center;
+  color: #696969;
+  font-size: 34px;
+  text-align: center;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-weight: 300;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.project-box-4 {
+  width: 300px;
+  height: 100%;
+  background: url("../../assets/inwedo.png") no-repeat;
+  background-size: 50%;
   background-position: center;
   cursor: pointer;
 }
 
 .project-row-box {
   width: 100%;
-  background: #f4f4f4;
-  height: calc(100vh - 288px);
+  background: white;
+  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -65,17 +85,21 @@ h2 {
 .project-row-box .project-row {
   display: flex;
   width: 100%;
+  height: 30%;
   justify-content: center;
 }
 
 .project-row-box .project-row h3 {
   margin-left: 50px;
   width: 50%;
+  height: 100%;
   background: transparent;
   display: flex;
   justify-content: center;
   align-items: center;
-  color: black;
+  color: #696969 !important;
+  margin: 0;
+  font-weight: 300;
 }
 
 h4 {
@@ -90,7 +114,8 @@ button {
   border: none;
   background: transparent;
   color: white;
-  font-weight: 900;
+  font-weight: 100;
+  letter-spacing: .2rem;
   font-size: 20px;
   padding: 0 50px;
   cursor: pointer;
@@ -110,11 +135,11 @@ button:focus {
   margin: 0 0 0 0px;
   width: 0px;
   height: 0px;
-  border-bottom: solid 30px #f4f4f4;
+  border-bottom: solid 30px white;
   border-left: solid 30px transparent;
   border-right: solid 30px transparent;
   position: absolute;
-  top: 80px;
+  top: 55px;
   left: 70px;
   transition: 1s ease;
 }
@@ -126,8 +151,7 @@ button:focus {
 .triangle-box {
   width: 100%;
   height: 160px;
-  background: #a3daff;
-  grid-area: secondSection;
+  background: black;
   text-align: center;
   align-items: center;
 }
