@@ -167,6 +167,7 @@ class App extends Component {
           <About  active= { this.state.currentPage === 'about' ? true : false } />
           <Contact />
           <Footer />
+ 
         </div>
       </div >
     );

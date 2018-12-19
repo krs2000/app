@@ -8,7 +8,7 @@ class Footer extends Component {
       <div className="footer" id='footer'>
  
         
-       <span>2018</span>
+       <span>2018</span><div className='decoration'></div>
       </div>
     );
   }
