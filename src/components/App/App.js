@@ -1,11 +1,8 @@
 import React, { Component } from 'react';
 import computer from '../../assets/computer.png'
-import lamp from '../../assets/lamp.png'
 import Linkedin from '../../assets/Linkedin.svg'
 import Instagram from '../../assets/Instagram.svg'
-import GitHub from '../../assets/GitHub.svg'
-import lamp1 from '../../assets/lamp1.png'
-import calendar from '../../assets/calendar.png'
+// import GitHub from '../../assets/GitHub.svg'
 import About from '../About/About.js'
 import Contact from '../Contact/Contact.js'
 import Projects from '../Projects/Projects.js'
@@ -18,7 +15,8 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.hamburger = React.createRef();
-    this.right = React.createRef();
+    this.right = React.createRef()
+    this.blog = React.createRef()
     // this.canvas = React.createRef();
     var d = new Date();
     this.state = {
@@ -32,31 +30,47 @@ class App extends Component {
   }
 
   componentDidMount() {
-    document.addEventListener("contextmenu", function(e){
-      e.preventDefault();
-      document.body.classList.add('floater')
-      alert('Eastern Egg');
-      setTimeout( () => document.body.classList.remove('floater'),3000 )
-      setTimeout( () => document.body.classList.add('zoomerOut'),10000 )
-  }, false);
-    window.addEventListener('scroll', this.handleScroll);
-    // setTimeout(()=>this.matrix(),1000);
-  }
+    document.addEventListener("contextmenu", function (e) {
+      // e.preventDefault();
+      // document.body.classList.add('floater')
+      // alert('Eastern Egg');
+      // setTimeout( () => document.body.classList.remove('floater'),3000 )
+      // setTimeout( () => document.body.classList.add('zoomerOut'),10000 )
+    }, false);
 
+    window.addEventListener('scroll', (e) => this.handleScroll(e));
+  }
+  componentWillMount() {
+
+  }
   componentWillUnmount() {
     window.removeEventListener('scroll', this.handleScroll);
   }
 
   handleScroll = (event) => {
+    var h = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
+    if (-(document.body.getBoundingClientRect()).top < 100) {
+      this.setState({ currentPage: 'homepage' });
+      document.location.hash = 'homepage';
+    }
+    else if (-(document.body.getBoundingClientRect()).top > 100 && -(document.body.getBoundingClientRect()).top <= h) {
+      this.setState({ currentPage: 'blog' });
+      document.location.hash = 'blog';
+
+    } else if (-(document.body.getBoundingClientRect()).top > h && -(document.body.getBoundingClientRect()).top <= 2 * h) {
+      this.setState({ currentPage: 'projects' });
+      document.location.hash = 'projects';
+    } else if (-(document.body.getBoundingClientRect()).top > 2 * h && -(document.body.getBoundingClientRect()).top <= 3 * h) {
+      this.setState({ currentPage: 'about' });
+          document.location.hash = 'about';
+    } else if (-(document.body.getBoundingClientRect()).top > 3 * h && -(document.body.getBoundingClientRect()).top <= 4 * h) {
+      this.setState({ currentPage: 'contact' });
+          document.location.hash = 'contact';
+    }
     this.setState({
       scrollPos: (document.body.getBoundingClientRect()).top
     });
-    if ((document.body.getBoundingClientRect()).top > this.state.scrollPos) {
-      console.log('up')
-      window.scrollTo(0, 0)
-    }
-    else {
-    }
+
   }
 
   clickHamburger = () => {
@@ -105,7 +119,7 @@ class App extends Component {
 
   render() {
     return (
-      <div className="app" onClick={(event) => event ===  'contextmenu' ?  event.preventDefault(): console.log('qpa') }>
+      <div className="app" onClick={(event) => event === 'contextmenu' ? event.preventDefault() : console.log('qpa')}>
 
         <div className="left-menu ">
           <ul id="menu">
@@ -145,9 +159,9 @@ class App extends Component {
               } />
             </div> */}
 
-          <Blog />
+          <Blog  active= { this.state.currentPage === 'blog' ? true : false } />
           <Projects />
-          <About />
+          <About  active= { this.state.currentPage === 'about' ? true : false } />
           <Contact />
           <Footer />
         </div>

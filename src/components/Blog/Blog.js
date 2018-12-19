@@ -8,7 +8,7 @@ class Blog extends Component {
     super(props);
     this.state = {
       articles: [],
-
+      loaded: false
     }
 
   }
@@ -25,7 +25,7 @@ class Blog extends Component {
 
   returnArticles = () => {
     return (
-      <div class="cards clearfix">
+      <div class="cards clearfix" id='blog'>
         {
           this.state.articles.slice(0, 3).map((article) =>
             <div className="card" key={`article-${article._id}`} >
@@ -43,12 +43,22 @@ class Blog extends Component {
       </div>)
   }
 
+  returnActiveClass = () => {
+    if (this.props.active && !this.state.loaded) {
+      setTimeout(() => this.setState({ loaded: true }), 1000);
+      return "blog-feed fadeIn";
+    }
+    else {
+      return "blog-feed"
+    }
+  }
+
   render() {
     return (
       <div className="blog" id='blog'>
         <h2><span></span>Blog</h2>
         <h3>Latest Posts</h3>
-        <div className="blog-feed slideLeft" onClick={() => console.log(this.state)}>
+        <div className={this.returnActiveClass()} onClick={() => console.log(this.state)}>
           {this.state.articles.length > 0 ? this.returnArticles() : ''}
         </div>
       </div>
