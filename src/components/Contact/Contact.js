@@ -147,7 +147,7 @@ resizeCanvas();
    
           <div className="icon-contact " ><img src={Email} className="floater"/>krskry@gmail.com</div>
           <h3>If you wish a new website, or you are looking for front-end developer for your projects, feel free to contact me.<br/>  Let's work together! </h3>
-          <div className='bottom-decoration'></div>
+       
 
 
       </div>

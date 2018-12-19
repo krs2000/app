@@ -19,17 +19,17 @@ $color-white: #cdcdcd;
     font-style: normal;
     font-display: swap;
 }
-html{
+
+html {
     scroll-behavior: smooth;
     transition: 5s ease;
 }
-body {
 
+body {
     margin: 0;
     padding: 0;
     font-family: "Avenir Next", "Avenir", sans-serif;
     font-family: "GalanoGrotesqueW00-Bold";
- 
 }
 
 .right-menu {
@@ -179,7 +179,7 @@ body {
     flex-direction: column;
     align-items: center;
     padding-top: 8rem;
-    padding-left:5rem;
+    padding-left: 5rem;
     span {
         width: 300px;
         height: 300px;
@@ -199,7 +199,7 @@ body {
                 height: 0.8rem;
                 width: 40px;
                 background-color: #dbaf40;
-                border-radius:50px;
+                border-radius: 50px;
             }
         }
     }
@@ -334,5 +334,48 @@ h2 {
         position: absolute;
         left: 0%;
         bottom: -.4rem;
+    }
+}
+
+.bottom-decoration-box {
+    overflow: hidden;
+    height:100vh;
+    width:100vw;
+    z-index:2;
+}
+
+.bottom-decoration {
+    &:after {
+        content: "";
+        position: absolute;
+        height: 90%;
+        width: 90%;
+        top: 55%;
+        left: 70%;
+        background: white;
+        -webkit-transform: rotate(-60deg);
+        -moz-transform: rotate(-60deg);
+        -ms-transform: rotate(-60deg);
+        -o-transform: rotate(-60deg);
+        transform: rotate(-60deg);
+        opacity: 1;
+        z-index: 0;
+    }
+    &:before {
+        z-index: 1;
+        content: "";
+        position: absolute;
+        height: 90%;
+        width: 90%;
+        top: 45%;
+        left: 65%;
+        background-image: url('../../assets/01.jpg');
+        background-size: 50%;
+        -webkit-transform: rotate(-60deg);
+        -moz-transform: rotate(-60deg);
+        -ms-transform: rotate(-60deg);
+        -o-transform: rotate(-60deg);
+        transform: rotate(-60deg);
+        opacity: .9;
     }
 }

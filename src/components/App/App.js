@@ -51,29 +51,29 @@ class App extends Component {
 
     var h = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
     var distance = -(document.body.getBoundingClientRect()).top;
-    if(this.state.scrollPos < distance  || distance < .1 * h){
-    if (distance < .1 * h ) {
-      this.setState({ currentPage: 'homepage' });
-      document.location.hash = 'homepage';
-    }
-    else if (distance > .1 * h && distance <= 1 * h ) {
-      this.setState({ currentPage: 'blog' });
-      document.location.hash = 'blog';
+    if (this.state.scrollPos < distance || distance < .1 * h) {
+      if (distance < .1 * h) {
+        this.setState({ currentPage: 'homepage' });
+        document.location.hash = 'homepage';
+      }
+      else if (distance > .1 * h && distance <= 1 * h) {
+        this.setState({ currentPage: 'blog' });
+        document.location.hash = 'blog';
 
-    } else if (distance > 1 * h && distance <= 2.1 * h) {
-      this.setState({ currentPage: 'projects' });
-      document.location.hash = 'projects';
-    } else if (distance > 2.1 * h && distance <= 3.1 * h) {
-      this.setState({ currentPage: 'about' });
-          document.location.hash = 'about';
-    } else if (distance > 3.1 * h && distance <= 4 * h) {
-      this.setState({ currentPage: 'contact' });
-          document.location.hash = 'contact';
+      } else if (distance > 1 * h && distance <= 2.1 * h) {
+        this.setState({ currentPage: 'projects' });
+        document.location.hash = 'projects';
+      } else if (distance > 2.1 * h && distance <= 3.1 * h) {
+        this.setState({ currentPage: 'about' });
+        document.location.hash = 'about';
+      } else if (distance > 3.1 * h && distance <= 4 * h) {
+        this.setState({ currentPage: 'contact' });
+        document.location.hash = 'contact';
+      }
+      this.setState({
+        scrollPos: (document.body.getBoundingClientRect()).top
+      });
     }
-    this.setState({
-      scrollPos: (document.body.getBoundingClientRect()).top
-    });
-  }
   }
 
   clickHamburger = () => {
@@ -146,28 +146,14 @@ class App extends Component {
 
             <div className='decoration'><div className='decoration-image'></div></div>
           </div>
-          {/* <canvas ref="canvas" width={600} height={300}/> */}
-          {/* <div className="sheleves-image">
-              <div className="books-image"></div>
-            </div>
-            <div className="calendar-image">
-              <span>{this.state.dateDays}</span>
-              <span>{this.state.dateMonth}</span>
-            </div>
-            <div className="computer-image">
-              <img className="lamp-img" src={this.state.lamp ? lamp : lamp1} onClick={
-                () => {
-                  this.setState({ lamp: !this.state.lamp })
-                }
-              } />
-            </div> */}
 
-          <Blog  active= { this.state.currentPage === 'blog' ? true : false } />
+
+          <Blog active={this.state.currentPage === 'blog' ? true : false} />
           <Projects />
-          <About  active= { this.state.currentPage === 'about' ? true : false } />
+          <About active={this.state.currentPage === 'about' ? true : false} />
           <Contact />
           <Footer />
- 
+
         </div>
       </div >
     );
