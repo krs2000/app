@@ -32,7 +32,13 @@ class App extends Component {
   }
 
   componentDidMount() {
-
+    document.addEventListener("contextmenu", function(e){
+      // e.preventDefault();
+      // document.body.classList.add('floater')
+      // alert('Eastern Egg');
+      // setTimeout( () => document.body.classList.remove('floater'),3000 )
+      // setTimeout( () => document.body.classList.add('zoomerOut'),10000 )
+  }, false);
     window.addEventListener('scroll', this.handleScroll);
     // setTimeout(()=>this.matrix(),1000);
   }
@@ -99,7 +105,7 @@ class App extends Component {
 
   render() {
     return (
-      <div className="app">
+      <div className="app" onClick={(event) => event ===  'contextmenu' ?  event.preventDefault(): console.log('qpa') }>
 
         <div className="left-menu ">
           <ul id="menu">
@@ -121,7 +127,7 @@ class App extends Component {
         <div id="home" className="right-menu" >
           <div className='home'>
 
-            <div className='decoration '><div className='decoration-image'></div></div>
+            <div className='decoration'><div className='decoration-image'></div></div>
           </div>
           {/* <canvas ref="canvas" width={600} height={300}/> */}
           {/* <div className="sheleves-image">

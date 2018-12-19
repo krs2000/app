@@ -12,19 +12,19 @@ $color-white: #cdcdcd;
 }
 
 @font-face {
-	font-family: "GalanoGrotesqueW00-Bold";
-	src: url("https://static2.pickjb.com/assets/fonts/BViCfMzo5aZXcMfAFVszrcqSc9xpSkbIw53S98ghSn9zP0Gq3uiZI3o7QHv4cVn/GalanoGrotesqueW00-Bold.eot");
-	src: local("☺︎"), local("Galano Grotesque W00 Bold"), local("GalanoGrotesqueW00-Bold"), url("https://static2.pickjb.com/assets/fonts/BViCfMzo5aZXcMfAFVszrcqSc9xpSkbIw53S98ghSn9zP0Gq3uiZI3o7QHv4cVn/GalanoGrotesqueW00-Bold.eot?#iefix") format("embedded-opentype"), url("https://static2.pickjb.com/assets/fonts/BViCfMzo5aZXcMfAFVszrcqSc9xpSkbIw53S98ghSn9zP0Gq3uiZI3o7QHv4cVn/GalanoGrotesqueW00-Bold.woff2") format("woff2"), url("https://static2.pickjb.com/assets/fonts/BViCfMzo5aZXcMfAFVszrcqSc9xpSkbIw53S98ghSn9zP0Gq3uiZI3o7QHv4cVn/GalanoGrotesqueW00-Bold.woff") format("woff"), url("https://static2.pickjb.com/assets/fonts/BViCfMzo5aZXcMfAFVszrcqSc9xpSkbIw53S98ghSn9zP0Gq3uiZI3o7QHv4cVn/GalanoGrotesqueW00-Bold.ttf") format("truetype"), url("https://static2.pickjb.com/assets/fonts/BViCfMzo5aZXcMfAFVszrcqSc9xpSkbIw53S98ghSn9zP0Gq3uiZI3o7QHv4cVn/GalanoGrotesqueW00-Bold.svg#GalanoGrotesqueW00-Bold") format("svg");
-	font-weight: 800;
-	font-style: normal;
-	font-display: swap;
+    font-family: "GalanoGrotesqueW00-Bold";
+    src: url("https://static2.pickjb.com/assets/fonts/BViCfMzo5aZXcMfAFVszrcqSc9xpSkbIw53S98ghSn9zP0Gq3uiZI3o7QHv4cVn/GalanoGrotesqueW00-Bold.eot");
+    src: local("☺︎"), local("Galano Grotesque W00 Bold"), local("GalanoGrotesqueW00-Bold"), url("https://static2.pickjb.com/assets/fonts/BViCfMzo5aZXcMfAFVszrcqSc9xpSkbIw53S98ghSn9zP0Gq3uiZI3o7QHv4cVn/GalanoGrotesqueW00-Bold.eot?#iefix") format("embedded-opentype"), url("https://static2.pickjb.com/assets/fonts/BViCfMzo5aZXcMfAFVszrcqSc9xpSkbIw53S98ghSn9zP0Gq3uiZI3o7QHv4cVn/GalanoGrotesqueW00-Bold.woff2") format("woff2"), url("https://static2.pickjb.com/assets/fonts/BViCfMzo5aZXcMfAFVszrcqSc9xpSkbIw53S98ghSn9zP0Gq3uiZI3o7QHv4cVn/GalanoGrotesqueW00-Bold.woff") format("woff"), url("https://static2.pickjb.com/assets/fonts/BViCfMzo5aZXcMfAFVszrcqSc9xpSkbIw53S98ghSn9zP0Gq3uiZI3o7QHv4cVn/GalanoGrotesqueW00-Bold.ttf") format("truetype"), url("https://static2.pickjb.com/assets/fonts/BViCfMzo5aZXcMfAFVszrcqSc9xpSkbIw53S98ghSn9zP0Gq3uiZI3o7QHv4cVn/GalanoGrotesqueW00-Bold.svg#GalanoGrotesqueW00-Bold") format("svg");
+    font-weight: 800;
+    font-style: normal;
+    font-display: swap;
 }
-
 
 body {
     margin: 0;
     padding: 0;
     font-family: "Avenir Next", "Avenir", sans-serif;
+    font-family: "GalanoGrotesqueW00-Bold";
 }
 
 .right-menu {
@@ -95,12 +95,12 @@ body {
     top: 0;
     left: 0;
     flex-direction: column;
+    z-index: 2;
     ul {
         margin: 0;
         padding: 0;
         width: 100%;
         position: relative;
-  
         a {
             padding: 0;
         }
@@ -173,11 +173,12 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-top: 1rem;
-
+    padding-top: 8rem;
+    padding-left:5rem;
     span {
         width: 300px;
         height: 300px;
+        font-family: "GalanoGrotesqueW00-Bold";
         div::first-letter {
             font-weight: 600;
             color: #dbaf40;
@@ -190,9 +191,10 @@ body {
                 bottom: -20px;
                 left: 0;
                 content: "";
-                height: 20px;
+                height: 0.8rem;
                 width: 40px;
                 background-color: #dbaf40;
+                border-radius:50px;
             }
         }
     }
@@ -311,12 +313,21 @@ a:hover {
 
 h2 {
     letter-spacing: 0.2rem;
-    font-size: 36px !important;
-    padding: 2rem 0;
+    font-size: 2rem !important;
+    line-height: 2.2rem;
+    padding: 4rem 0;
     margin: 0;
-    font-weight:300;
-    &::first-letter{
-  
-       
+    font-weight: 300;
+    span {
+        position: relative;
+    }
+    span::before {
+        content: '';
+        border-bottom: .4rem solid white;
+        border-radius: 50px;
+        width: 1.2rem;
+        position: absolute;
+        left: 0%;
+        bottom: -.4rem;
     }
 }

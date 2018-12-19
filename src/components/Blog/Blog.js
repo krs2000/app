@@ -46,7 +46,7 @@ class Blog extends Component {
   render() {
     return (
       <div className="blog" id='blog'>
-        <h2>Blog</h2>
+        <h2><span></span>Blog</h2>
         <h3>Latest Posts</h3>
         <div className="blog-feed slideLeft" onClick={() => console.log(this.state)}>
           {this.state.articles.length > 0 ? this.returnArticles() : ''}

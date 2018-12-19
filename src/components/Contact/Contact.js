@@ -55,7 +55,7 @@ resizeCanvas();
     context.globalCompositeOperation = 'lighter';
 
  
-    var textStrip = ['JS', ' HTML', 'CSS','Angular','Angular.js', 'React.js','API','UI/UX','WP','C#','Node.js'];
+    var textStrip = ['JS','JQuery','Redux','Woocomerce', ' HTML5', 'CSS','Angular','Angular.js', 'React.js','API','UI/UX','WP','C#','Node.js','SCSS','Bootsrap','Moment.js','ES6'];
 
     var stripCount = 15, stripX = new Array(), stripY = new Array(), dY = new Array(), stripType = new Array(), stripFontSize = new Array();
 
@@ -128,9 +128,10 @@ resizeCanvas();
     return (
 
       <div ref={element => this.contactRef = element}  className="contact" id='contact'>
-   <h2>Contact</h2>     
+   <h2><span></span>Contact</h2>     
     {this.state.elementHeight && <canvas ref="canvas" width={this.state.elementWidth} height={this.state.elementHeight}/> }
-        <div className="emailForm">
+
+
           {/* <form className="formData" action="https://formspree.io/krskrysiak@gmail.com"
             method="POST">
             <TextField rowsMax={10} multiline={true} type="text" className="textData" name="message" placeholder="Your message" fullWidth={true} required={true}/>
@@ -142,14 +143,10 @@ resizeCanvas();
             appId="2201094929903504"
             htmlRef={window.location.pathname}
           />
-        </div>
-        
-          <div className="icon-contact" ><img src={Pin}/>Łódź, Poland</div>
+   
           <div className="icon-contact" ><img src={Email}/>krskry@gmail.com</div>
-          <div className="icon-contact" ><img src={Phone}/>+48 792067063</div>
-
-          <div id="progress"></div>
-
+          <h3>If you wish a new website, or you are looking for front-end developer for your projects, feel free to contact me.<br/>  Let's work together! </h3>
+        
 
 
       </div>

@@ -24,17 +24,17 @@ console.log(this.state.firstCard)
       <div className="projects" id='projects'>
       <h2>Projects</h2>
         <div className='triangle-box'>
-          <button  className={this.state.firstCard ? "btn1 triangle" : "btn1 triangle triangle-1"} onClick={()=> this.change()}>Clients</button>
-          <button className="btn-2" onClick={()=> this.change()}>Personal</button>
+          <button  className={this.state.firstCard ? "btn1 triangle active" : "btn1 triangle triangle-1"} onClick={()=> this.change()}>Clients</button>
+          <button className={this.state.firstCard ? "btn2" : "btn2 active"} onClick={()=> this.change()}>Personal</button>
         </div>
-      { !this.state.firstCard &&  <div className="project-row-box">
-        <div className="project-row">  <div className="project-box-1"></div><h3>Crafted beers playground app v0.1</h3></div>
-        <div className="project-row"><div className="project-box-2">Invest Jar</div><h3>Investing playground app v0.1</h3></div>
+      { !this.state.firstCard &&  <div className="project-row-box ">
+        <div className="project-row">  <div className="project-box-1 slideRight"></div><h3 className="slideRight">Crafted beers playground app v0.1</h3></div>
+        <div className="project-row"><div className="project-box-2 slideRight">Invest Jar</div><h3 className="slideRight">Investing playground app v0.1</h3></div>
     </div> }
-       { this.state.firstCard  && <div className="project-row-box">
-        <div className="project-row"><div className="project-box"></div><h3>Filming Agency</h3></div>
-        <div className="project-row"><div className="project-box-3">Clickdesign</div><h3>Web Agency</h3></div>
-        <div className="project-row"><div className="project-box-4"></div><h3>Software House</h3></div>
+       { this.state.firstCard  && <div className="project-row-box ">
+        <div className="project-row"><div className="project-box slideLeft"></div><h3  className="slideLeft">Filming Agency</h3></div>
+        <div className="project-row"><div className="project-box-3 slideLeft">Clickdesign</div><h3 className="project-box-1 slideLeft">Web Agency</h3></div>
+        <div className="project-row"><div className="project-box-4 slideLeft"></div><h3 className="slideLeft">Software House</h3></div>
     </div> }
       </div>
     );

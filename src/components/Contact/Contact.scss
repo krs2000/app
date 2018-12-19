@@ -4,7 +4,8 @@ $color-white: #cdcdcd;
 .contact {
     background-color:black ;
     background-size: cover;
-    height: 100vh;
+    height: calc(100vh - 1.8rem - 20px);
+  
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -15,7 +16,23 @@ $color-white: #cdcdcd;
    
     background-position: bottom right;
     position: relative;
+    h3{
+   
+line-height:1.8rem;
+        font-size: 0.8rem;
 
+    font-style:italic;
+      font-size: 1rem;
+      color:#dbaf40;
+      width: 100%;
+      font-family:'Roboto';
+      font-weight:100;
+      text-align: center;
+      z-index: 2;
+      padding-top:0;
+      padding-bottom:1.2rem;
+      padding:0 8rem !important;
+    }
 //     &:after{
       
 //         content: "";
@@ -56,28 +73,25 @@ $color-white: #cdcdcd;
     width: 50vw;
 }
 
-.formData {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-
-.textData,
-.emailData {
-    background: #f4f4f4;
-    margin: 5px;
-}
 
 .icon-contact {
+
     color: white;
     padding-bottom:16px;
     font-size: 24px;
     transform: scale(.7);
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: "GalanoGrotesqueW00-Bold";
     img {
+        margin-left:8px;
+        padding:5rem;
         margin-right: 16px;
-        width: 48px;
-        height: 48px;
+        width: 10rem;
+        height: 10rem;
+        cursor:pointer;
     }
 }
 

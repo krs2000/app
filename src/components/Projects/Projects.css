@@ -91,7 +91,7 @@ h2 {
 
 .project-row-box .project-row h3 {
   margin-left: 50px;
-  width: 50%;
+  width: 30%;
   height: 100%;
   background: transparent;
   display: flex;
@@ -120,14 +120,27 @@ button {
   padding: 0 50px;
   cursor: pointer;
   position: relative;
+  transition: 1s ease;
 }
 
 button:focus {
   outline: 0;
 }
 
+button:hover {
+  color: #dbaf40;
+}
+
+.btn2.active {
+  color: #dbaf40;
+}
+
 .triangle {
   position: relative;
+}
+
+.triangle.active {
+  color: #dbaf40;
 }
 
 .triangle::before {
@@ -140,12 +153,12 @@ button:focus {
   border-right: solid 30px transparent;
   position: absolute;
   top: 55px;
-  left: 70px;
+  left: 30%;
   transition: 1s ease;
 }
 
 .triangle.triangle-1::before {
-  left: 250px;
+  left: 140%;
 }
 
 .triangle-box {

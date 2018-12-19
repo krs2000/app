@@ -64,12 +64,24 @@ Cards
     margin: 0 1.5%;
     background: white;
     float: left;
-    max-height:500px;
+    height:calc(100vh - 20rem);
+
     box-shadow: 0 10px 10px 0 rgba(0, 0.2, 0, 0.2);
     transition: 1s ease;
     cursor:pointer;
     &:first-of-type{
         width:50%;
+    }
+    img{
+        width:100%;
+        height: 200px;
+    }
+    h4{
+        text-align: center;
+    }
+    p{
+        font-family: 'Roboto';
+        font-style: italic;
     }
 }
 
