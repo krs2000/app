@@ -142,6 +142,7 @@ resizeCanvas();
             pageId="410114706194481"
             appId="2201094929903504"
             htmlRef={window.location.pathname}
+            themeColor="#dbaf40"
           />
    
           <div className="icon-contact " ><img src={Email} className="floater"/>krskry@gmail.com</div>

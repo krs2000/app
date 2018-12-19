@@ -48,29 +48,32 @@ class App extends Component {
   }
 
   handleScroll = (event) => {
+
     var h = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
-    if (-(document.body.getBoundingClientRect()).top < 100) {
+    var distance = -(document.body.getBoundingClientRect()).top;
+    if(this.state.scrollPos < distance  || distance < .1 * h){
+    if (distance < .1 * h ) {
       this.setState({ currentPage: 'homepage' });
       document.location.hash = 'homepage';
     }
-    else if (-(document.body.getBoundingClientRect()).top > 100 && -(document.body.getBoundingClientRect()).top <= h) {
+    else if (distance > .1 * h && distance <= 1 * h ) {
       this.setState({ currentPage: 'blog' });
       document.location.hash = 'blog';
 
-    } else if (-(document.body.getBoundingClientRect()).top > h && -(document.body.getBoundingClientRect()).top <= 2 * h) {
+    } else if (distance > 1 * h && distance <= 2.1 * h) {
       this.setState({ currentPage: 'projects' });
       document.location.hash = 'projects';
-    } else if (-(document.body.getBoundingClientRect()).top > 2 * h && -(document.body.getBoundingClientRect()).top <= 3 * h) {
+    } else if (distance > 2.1 * h && distance <= 3.1 * h) {
       this.setState({ currentPage: 'about' });
           document.location.hash = 'about';
-    } else if (-(document.body.getBoundingClientRect()).top > 3 * h && -(document.body.getBoundingClientRect()).top <= 4 * h) {
+    } else if (distance > 3.1 * h && distance <= 4 * h) {
       this.setState({ currentPage: 'contact' });
           document.location.hash = 'contact';
     }
     this.setState({
       scrollPos: (document.body.getBoundingClientRect()).top
     });
-
+  }
   }
 
   clickHamburger = () => {

@@ -18,6 +18,11 @@
   font-display: swap;
 }
 
+html {
+  scroll-behavior: smooth;
+  transition: 5s ease;
+}
+
 body {
   margin: 0;
   padding: 0;
