@@ -31,11 +31,11 @@ class App extends Component {
 
   componentDidMount() {
     document.addEventListener("contextmenu", function (e) {
-      // e.preventDefault();
-      // document.body.classList.add('floater')
-      // alert('Eastern Egg');
-      // setTimeout( () => document.body.classList.remove('floater'),3000 )
-      // setTimeout( () => document.body.classList.add('zoomerOut'),10000 )
+      e.preventDefault();
+      document.body.classList.add('floater')
+      alert('Eastern Egg');
+      setTimeout( () => document.body.classList.remove('floater'),3000 )
+      setTimeout( () => document.body.classList.add('zoomerOut'),10000 )
     }, false);
 
     window.addEventListener('scroll', (e) => this.handleScroll(e));
