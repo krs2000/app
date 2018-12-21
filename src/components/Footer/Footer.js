@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './Footer.css';
-import Counter from '../../assets/counter.gif'
+
 
 class Footer extends Component {
   render() {

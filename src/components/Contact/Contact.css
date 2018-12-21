@@ -18,14 +18,19 @@
   font-style: italic;
   font-size: 1rem;
   color: #dbaf40;
-  width: 100%;
+  width: 40%;
   font-family: 'Roboto';
   font-weight: 100;
   text-align: center;
   z-index: 2;
   padding-top: 0;
   padding-bottom: 1.2rem;
-  padding: 0 8rem !important;
+}
+
+.contact p {
+  color: white;
+  font-size: 1rem;
+  height: 1rem;
 }
 
 .emailForm {
@@ -35,8 +40,9 @@
 .icon-contact {
   color: white;
   padding-bottom: 16px;
-  font-size: 24px;
+  font-size: 1rem;
   transform: scale(0.7);
+  transition: 1s ease;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -44,17 +50,35 @@
   font-family: "GalanoGrotesqueW00-Bold";
 }
 
+.icon-contact.scale {
+  transform: scale(0.2);
+}
+
 .icon-contact img {
   margin-left: 8px;
-  padding: 5rem;
-  margin-right: 16px;
+  padding: 4rem 0;
   width: 10rem;
   height: 10rem;
   cursor: pointer;
+  margin: 0;
 }
 
 canvas {
   position: absolute;
   left: 0;
   top: -100vh;
+}
+
+@media only screen and (max-width: 769px) {
+  .contact h3 {
+    width: 80%;
+    margin: 1rem;
+    padding: 0;
+  }
+  .contact .icon-contact {
+    padding: 0;
+  }
+  .contact .icon-contact img {
+    padding: 0;
+  }
 }

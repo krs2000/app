@@ -13,40 +13,40 @@ class About extends Component {
 
   }
 
-  componentDidUpdate(prevProps) {
-    if (this.props.active !== prevProps.active) {
-      setTimeout(() => this.setState({ loaded: true }), 11000);
-    }
+  componentDidMount() {
+    this.loaded = true;
   }
 
-  returnActiveClass = (t) => {
-    return 'zoomer'
+  // componentDidUpdate(prevProps) {
 
-  }
-  
+  //   if (this.props.active !== prevProps.active) {
+  //   this.animate = setTimeout( () => this.loaded = true , 11000 );
+  //     this.animate
+  //   }
+  // }
+
+
 
 
   render() {
     return (
 
       <div className="about" id='about'>
-
-        <h2><span ></span>About</h2>
-        {
-         (this.state.loaded || this.props.active) &&  <div>
-             <Delayed waitBeforeShow={0}><h3 className='zoomer'>..::FRONT-END DEVELOPMENT::..</h3></Delayed>
-            <Delayed waitBeforeShow={1000}><p className='slideDown'>Well written JS, HTML and CSS can make your ideas happen.</p> </Delayed>
-            <Delayed waitBeforeShow={2000}> <h3 className='zoomer'>..::RESPONSIVE DESIGN::..</h3></Delayed>
-            <Delayed waitBeforeShow={3000}> <p className='slideDown'>No matter the device, your website will shine.</p></Delayed>
-            <Delayed waitBeforeShow={4000}>  <h3 className='zoomer'>..::WORDPRESS DEVELOPMENT::..</h3></Delayed>
-            <Delayed waitBeforeShow={5000}>  <p className='slideDown'>Most advanced extensions and plugins can make a difference.</p></Delayed>
-            <Delayed waitBeforeShow={6000}>  <h3 className='zoomer'>..::WOOCOMMERCE DEVELOPMENT::..</h3></Delayed>
-            <Delayed waitBeforeShow={7000}> <p className='slideDown'>E-commerce is on the rise.</p></Delayed>
-            <Delayed waitBeforeShow={8000}>  <h3 className='zoomer'>..::ADVANCED ANIMATIONS::..</h3></Delayed>
-            <Delayed waitBeforeShow={9000}> <p className='slideDown'>Animations that can make your website alive.</p></Delayed>
-            <Delayed waitBeforeShow={10000}> <h3 className='zoomer'>..::ACCESSIBILITY & SEMANTICS::..</h3></Delayed>
-            <Delayed waitBeforeShow={11000}> <p className='slideDown'>Usability to make your website up to standards.</p></Delayed></div>
-        }
+        <h2 ><span ></span>About</h2>
+    {    this.props.active &&  <div className='skills'>
+        <Delayed mounted={true} mountAfter={0} waitBeforeShow={0}><h3 className={this.props.active ? " fadeIn" : " fadeOut"}>FRONT-END DEVELOPMENT</h3></Delayed>
+        <Delayed mounted={true} mountAfter={0} waitBeforeShow={100}><p className={this.props.active ? " fadeIn" : " fadeOut"}>Well written JS, HTML and CSS can make your ideas happen.</p> </Delayed>
+        <Delayed mounted={true} mountAfter={0} waitBeforeShow={200}> <h3 className={this.props.active ? " fadeIn" : " fadeOut"}>RESPONSIVE DESIGN</h3></Delayed>
+        <Delayed mounted={true} mountAfter={0} waitBeforeShow={300}> <p className={this.props.active ? " fadeIn" : " fadeOut"}>No matter the device, your website will shine.</p></Delayed>
+        <Delayed mounted={true} mountAfter={0} waitBeforeShow={400}>  <h3 className={this.props.active ? " fadeIn" : " fadeOut"}>WORDPRESS DEVELOPMENT</h3></Delayed>
+        <Delayed mounted={true} mountAfter={0} waitBeforeShow={500}>  <p className={this.props.active ? " fadeIn" : " fadeOut"}>Most advanced extensions and plugins can make a difference.</p></Delayed>
+        <Delayed mounted={true} mountAfter={0} waitBeforeShow={600}>  <h3 className={this.props.active ? " fadeIn" : " fadeOut"}>WOOCOMMERCE DEVELOPMENT</h3></Delayed>
+        <Delayed mounted={true} mountAfter={0} waitBeforeShow={700}> <p className={this.props.active ? " fadeIn" : " fadeOut"}>E-commerce is on the rise.</p></Delayed>
+        <Delayed mounted={true} mountAfter={0} waitBeforeShow={800}>  <h3 className={this.props.active ? " fadeIn" : " fadeOut"}>ADVANCED ANIMATIONS</h3></Delayed>
+        <Delayed mounted={true} mountAfter={0} waitBeforeShow={900}> <p className={this.props.active ? " fadeIn" : " fadeOut"}>Animations that can make your website alive.</p></Delayed>
+        <Delayed mounted={true} mountAfter={0} waitBeforeShow={1000}> <h3 className={this.props.active ? " fadeIn" : " fadeOut"}>ACCESSIBILITY & SEMANTICS</h3></Delayed>
+        <Delayed mounted={true} mountAfter={0} waitBeforeShow={1100}> <p className={this.props.active ? " fadeIn" : " fadeOut"}>Usability to make your website up to standards.</p></Delayed>
+        </div>}
       </div>
 
 

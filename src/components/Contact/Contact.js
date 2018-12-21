@@ -1,13 +1,8 @@
 import React, { Component } from 'react';
 import './Contact.css';
-import Input from '@material-ui/core/Input';
-import IconButton from '@material-ui/core/IconButton';
-import TextField from '@material-ui/core/TextField';
 import MessengerCustomerChat from 'react-messenger-customer-chat';
-import Pin from '../../assets/Pin.svg'
 import Email from '../../assets/Email.svg'
-import Phone from '../../assets/Phone.svg'
-import spacing from '@material-ui/core/styles/spacing';
+
 
 class Contact extends Component {
   constructor(props) {
@@ -32,8 +27,6 @@ class Contact extends Component {
     //  var canvas =     this.hamburger.current.appendChild( document.createElement( 'canvas' ) );
     //  var context =   this.canvas.current ;
     // this.hamburger.current
-    
-    var contactRef = this.refs.contactRef;
     function resizeCanvas() {
       // canvas.width = contactRef.innerWidth;
       // canvas.height = contactRef.innerHeight;
@@ -48,16 +41,10 @@ class Contact extends Component {
 resizeCanvas();
     var canvas = this.refs.canvas;
     window.addEventListener('resize', resizeCanvas, false);
-    // console.log(canvas)
-    context = this.refs.canvas.getContext('2d');
- 
-    context = canvas.getContext( '2d' );
+    let context = canvas.getContext( '2d' );
     context.globalCompositeOperation = 'lighter';
-
- 
     var textStrip = ['JS','JQuery','Redux','Woocomerce', ' HTML5', 'CSS','Angular','Angular.js', 'React.js','API','UI/UX','WP','C#','Node.js','SCSS','Bootsrap','Moment.js','ES6'];
-
-    var stripCount = 15, stripX = new Array(), stripY = new Array(), dY = new Array(), stripType = new Array(), stripFontSize = new Array();
+    var stripCount = 15, stripX = [], stripY = [], dY = [], stripType = [], stripFontSize = [];
 
     for (var i = 0; i < stripCount; i++) {
       stripX[i] = 0;
@@ -67,19 +54,18 @@ resizeCanvas();
       stripFontSize[i] = Math.floor(Math.random() * 16) + 8;
     }
 
-    var theColors = ['rgba(255, 255, 255, 0.3)'];
-
-    var elem, context, timer;
+    var theColors = ['rgba(255, 255, 255, 0.2)'];
 
     function drawStrip(x, y, i) {
       for (var k = 0; k <= 0; k++) {
         var randChar = textStrip[Math.floor(Math.random() * textStrip.length)];
-        var randChar = textStrip[i];
+         randChar = textStrip[i];
         if (context.fillText) {
           switch (k) {
             case 0:
               context.fillStyle = theColors[0]; break;
-
+            default:
+            break;
           }
           context.fillText(randChar, x, y);
         }
@@ -128,7 +114,7 @@ resizeCanvas();
     return (
 
       <div ref={element => this.contactRef = element}  className="contact" id='contact'>
-   <h2><span></span>Contact</h2>     
+   <h2 ><span></span>Contact</h2>     
     {this.state.elementHeight && <canvas ref="canvas" width={this.state.elementWidth} height={this.state.elementHeight}/> }
 
 
@@ -145,9 +131,10 @@ resizeCanvas();
             themeColor="#dbaf40"
           />
    
-          <div className="icon-contact " ><img src={Email} className="floater"/>krskry@gmail.com</div>
+          <div  className={!this.state.email ? "icon-contact" : 'icon-contact scale'}  ><img src={Email} alt='email icon' className={!this.state.email ? "floater" : ''} onClick={()=>this.setState({email : true})}/></div>
+          {this.state.email &&<p className={this.state.email ? "slideDown" : ''}>krskry@gmail.com</p>}
           <h3>If you wish a new website, or you are looking for front-end developer for your projects, feel free to contact me.<br/>  Let's work together! </h3>
-       
+         
 
 
       </div>

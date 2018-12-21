@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import './index.css';
 import axios from 'axios';
-import Moment from 'react-moment';
-import sb from '../../assets/shark-blog.png';
+
+
 class Blog extends Component {
   constructor(props) {
     super(props);
@@ -14,22 +14,20 @@ class Blog extends Component {
   }
 
   componentDidMount() {
-    const { onLoad } = this.props;
-
     axios('https://shark-blog-one.herokuapp.com/api/articles')
       .then((res) => {
         this.setState({ articles: res.data.articles })
-        console.log(res.data)
+
       });
   }
 
   returnArticles = () => {
     return (
-      <div class="cards clearfix" id='blog'>
+      <div className="cards clearfix" id='blog'>
         {
           this.state.articles.slice(0, 3).map((article) =>
             <div className="card" key={`article-${article._id}`} >
-              <img className="card__image" src="https://source.unsplash.com/category/nature/400x260" alt="Nature" />
+              <img className="card__image" src="https://source.unsplash.com/category/nature/400x260" alt="blog" />
               <div className="card__copy">
                 <h4>{article.title}</h4>
                 <p>{article.body}</p>

@@ -13,7 +13,7 @@ color:white;
         padding-top:1rem;
         padding:0;
      margin-bottom: 0.2rem;
-        z-index: 2;
+   
     }
     p {
         font-style: italic;
@@ -24,9 +24,16 @@ color:white;
         font-family:'Roboto';
         font-weight:100;
         text-align: center;
-        z-index: 2;
+    
         padding-top:0;
         padding-bottom:1.2rem;
+    }
+    .skills{
+        display:flex;
+        height:calc('100%- 10.2rem');
+        justify-content: space-between;
+        align-items:center;
+        flex-direction: column;
     }
 
 }
@@ -40,8 +47,7 @@ h2 {
     color: white;
     text-align: center;
     width: 100%;
-    z-index: 2;
-    
+
 font-family: "GalanoGrotesqueW00-Bold";
 }
 
@@ -57,5 +63,16 @@ font-family: "GalanoGrotesqueW00-Bold";
         opacity: 0.9;
         padding: 16px;
         z-index: 2;
+    }
+}
+
+@media only screen and (max-width: 769px) {
+    .about{
+        h3{
+            padding-top:.2rem;
+        }
+        p{
+            padding-bottom: .2rem;
+        }
     }
 }

@@ -13,23 +13,27 @@ $color-white: #cdcdcd;
     background-size: 100%;
     background-position: bottom right;
     position: relative;
-  
     h3 {
         line-height: 1.8rem;
         font-size: 0.8rem;
         font-style: italic;
         font-size: 1rem;
         color: #dbaf40;
-        width: 100%;
+        width: 40%;
         font-family: 'Roboto';
         font-weight: 100;
         text-align: center;
         z-index: 2;
         padding-top: 0;
         padding-bottom: 1.2rem;
-        padding: 0 8rem !important;
+ 
     }
-    //   
+    p {
+        color: white;
+        font-size: 1rem;
+        height: 1rem;
+      
+    }
 }
 
 .emailForm {
@@ -39,8 +43,12 @@ $color-white: #cdcdcd;
 .icon-contact {
     color: white;
     padding-bottom: 16px;
-    font-size: 24px;
+    font-size: 1rem;
     transform: scale(.7);
+    transition: 1s ease;
+    &.scale {
+        transform: scale(.2);
+    }
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -48,11 +56,11 @@ $color-white: #cdcdcd;
     font-family: "GalanoGrotesqueW00-Bold";
     img {
         margin-left: 8px;
-        padding: 5rem;
-        margin-right: 16px;
+        padding: 4rem 0;
         width: 10rem;
         height: 10rem;
         cursor: pointer;
+        margin: 0;
     }
 }
 
@@ -62,4 +70,17 @@ canvas {
     top: -100vh; // display:block; 
 }
 
-
+@media only screen and (max-width: 769px) {
+    .contact {
+        h3 {
+        width:80%;
+        margin:1rem;
+        padding:0;
+    }
+.icon-contact {
+    padding: 0;
+    img{
+        padding:0;
+    }
+}}
+}
