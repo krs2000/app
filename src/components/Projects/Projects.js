@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './Projects.css';
-import AliceCarousel from 'react-alice-carousel';
+// import AliceCarousel from 'react-alice-carousel';
 class Projects extends Component {
 
   constructor(props) {
